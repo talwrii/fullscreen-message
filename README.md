@@ -12,6 +12,7 @@ You can install fullscreen-message using [pipx](https://github.com/pypa/pipx):
 
 ## Usage
 Show hello world across the whole screen:
+
 ```
 fullscreen-message 'Hello world'
 ```
