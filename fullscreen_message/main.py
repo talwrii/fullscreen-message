@@ -1,22 +1,13 @@
 #!/usr/bin/env python3
 """Display fullscreen messages that close on keypress."""
+
 import tkinter as tk
 import tkinter.font as tkfont
 import sys
 
 
 def find_optimal_font_size(text, screen_width, screen_height, font_family='Arial'):
-    """Find the largest font size that fits the text on screen.
-    
-    Args:
-        text: Text to display
-        screen_width: Screen width in pixels
-        screen_height: Screen height in pixels
-        font_family: Font family to use
-    
-    Returns:
-        Optimal font size in points
-    """
+    "Find the largest font size that fits the text on screen"
     # Target: fill 80% of screen width and 60% of height
     target_width = screen_width * 0.8
     target_height = screen_height * 0.6
@@ -51,31 +42,19 @@ def find_optimal_font_size(text, screen_width, screen_height, font_family='Arial
 
 
 def show_fullscreen_message(message, bg_color="black", text_color="white"):
-    """Display a fullscreen message that closes on any key press.
-    
-    Args:
-        message: Text to display
-        bg_color: Background color (default: black)
-        text_color: Text color (default: white)
-    """
+    "Display a fullscreen message that closes on any key press."
     root = tk.Tk()
     root.attributes('-fullscreen', True)
     root.configure(background=bg_color)
     
-    # Get screen dimensions
-    screen_width = root.winfo_screenwidth()
-    screen_height = root.winfo_screenheight()
-    
-    # Find optimal font size
+    screen_width, screen_height = root.winfo_screenwidth(), root.winfo_screenheight()
     font_size = find_optimal_font_size(message, screen_width, screen_height)
     
     # Close on any key press or Escape
     root.bind('<Key>', lambda e: root.destroy())
     root.bind('<Escape>', lambda e: root.destroy())
     
-    # Create label with message
-    label = tk.Label(
-        root,
+    label = tk.Label(root,
         text=message,
         font=('Arial', font_size, 'bold'),
         bg=bg_color,
