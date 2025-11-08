@@ -10,6 +10,10 @@ Finding notifications at the side of your screen can be a pain. It *is* useful w
 ## Installation
 You can install fullscreen-message using [pipx](https://github.com/pypa/pipx):
 
+```
+pipx install fullscreen-message
+```
+
 ## Usage
 Show hello world across the whole screen:
 
