@@ -13,7 +13,7 @@ You can install fullscreen-message using [pipx](https://github.com/pypa/pipx):
 ## Usage
 Show hello world across the whole screen:
 
-```
+```bash
 fullscreen-message 'Hello world'
 ```
 
