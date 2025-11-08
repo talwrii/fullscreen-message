@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fullscreen-message"
-version = "0.1.0"
-description = "A command-line tool to show big messages across the entire screen"
+version = "1.0.0"
+description = "A command-line tool to show big messages across the entire screen in a GUI"
 readme = "README.md"
 requires-python = ">=3.7"
 license = {text = "MIT"}
 authors = [
-    {name = "Your Name", email = "your.email@example.com"}
+    {name = "@readwithai", email = "talwrii@googlemail.com"}
 ]
 keywords = ["notification", "message", "fullscreen", "alert", "display"]
 classifiers = [
@@ -30,8 +30,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/fullscreen-message"
-Issues = "https://github.com/yourusername/fullscreen-message/issues"
+Homepage = "https://github.com/talwrii/fullscreen-message"
+Issues = "https://github.com/talwrii/fullscreen-message/issues"
 
 [project.scripts]
 fullscreen-message = "fullscreen_message.main:main"
